@@ -37,7 +37,7 @@ type alias NotifyPort msg =
       (Just body)
       (Just imageUrl)
 
-Requests permission first. Most browsers cache your answer, or allow you to say you whether you want them to remember it. If permission is denied, no notifications will appear, and your program won't know that.
+Requests permission first. Most browsers cache your answer, or allow you to say whether you want them to remember it. If permission is denied, no notifications will appear, and your program won't know that.
 
 -}
 createNotification : NotifyPort msg -> String -> Maybe String -> Maybe String -> Cmd msg
