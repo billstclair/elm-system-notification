@@ -7,4 +7,6 @@ To compile "Main.elm" into "../site/index.js":
     
 Then aim your browser at "../site/index.html".
 
+The page shows a single "Notify" button. Click it to request permission for notifications, and, if given, create a notification.
+
 If your browser is Chrome, you'll need to upload the "site" directory to a real web server, or the notifications will not appear.
