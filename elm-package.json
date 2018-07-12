@@ -1,7 +1,7 @@
 {
     "version": "1.0.0",
     "summary": "elm-package-template is a template for new package creation.",
-    "repository": "https://github.com/billstclair/elm-package-template.git",
+    "repository": "https://github.com/billstclair/elm-system-notification.git",
     "license": "MIT",
     "source-directories": [
         "."
