@@ -1,5 +1,5 @@
 {
-    "version": "1.0.3",
+    "version": "1.0.4",
     "summary": "A simple interface to the Notifications API.",
     "repository": "https://github.com/billstclair/elm-system-notification.git",
     "license": "MIT",

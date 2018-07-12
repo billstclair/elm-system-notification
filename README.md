@@ -8,7 +8,7 @@ See the "example" directory for a simple use case.
 
 In order to use it, your top-level program needs to have a port with which to communicate with the JavaScript code:
 
-    port notify NotifyPort
+    port notify : NotifyPort
     
 You need to compile your program to a site directory:
 
