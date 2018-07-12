@@ -26,14 +26,7 @@ var app = Elm.Main.fullscreen();
 
 // Change "notify" to your port name.
 app.ports.notify.subscribe(function(obj) {
-  function donotify(permission) {
-    if (permission == "granted") {
-      elmNotifications.notify(obj.title, obj.body, obj.image);
-    }
-  }
-  if (elmNotifications.isAvailable()) {
-    elmNotifications.requestPermission(donotify);
-  }
+  elmNotifications.notify(obj.title, obj.body, obj.image);
 });
 
     </script>

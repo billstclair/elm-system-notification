@@ -31,11 +31,16 @@ var elmNotifications = {};
   }
 
   function notify(title, body, img) {
-    var options = {};
-    if (body) { options.body = body };
-    if (img) { options.icon = img };
-    var notification = new Notification(title, options);
-    setTimeout(function() { notification.close.bind(notification)() }, 4000);
+    if (isAvailable()) {
+      requestPermission(function(permission) {
+        if (permission == "granted") {
+          var options = {};
+          if (body) { options.body = body };
+          if (img) { options.icon = img };
+          var notification = new Notification(title, options);
+          setTimeout(function() { notification.close.bind(notification)() }, 4000);
+        }
+      });
+    }
   }
-
 })();
