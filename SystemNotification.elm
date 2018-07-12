@@ -30,7 +30,7 @@ type alias NotifyPort msg =
     Value -> Cmd msg
 
 
-{-| Send a notification out through notifyPort with the title, body, and imageUrl.
+{-| Send a notification out through the NotifyPort with the given title and optional body and imageUrl.
 
     createNotification notify
       title

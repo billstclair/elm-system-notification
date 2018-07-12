@@ -1,6 +1,6 @@
 {
-    "version": "1.0.2",
-    "summary": "elm-package-template is a template for new package creation.",
+    "version": "1.0.3",
+    "summary": "A simple interface to the Notifications API.",
     "repository": "https://github.com/billstclair/elm-system-notification.git",
     "license": "MIT",
     "source-directories": [
