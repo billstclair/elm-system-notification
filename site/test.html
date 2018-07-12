@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>Notifications Test</title>
+    <meta charset='UTF-8'>
+    <script type='text/javascript' src='js/elmNotifications.js'></script>
+    <script type='text/javascript'>
+
+// example/Main.elm does the same thing as this script.
+
+function notify() {
+  if (elmNotifications.isAvailable()) {
+    elmNotifications.requestPermission(donotify);
+  }
+}
+
+function donotify(permission) {
+  console.log("permission", permission);
+  if (permission == "granted") {
+    elmNotifications.notify("You've been notified.",
+                            "Look at my beautiful body!",
+                            "https://kakuro-dojo.com/images/elm-logo-125x125.png");
+  }
+}
+    </script>
+  </head>
+  <body>
+    <button type='button' onclick='notify()'>Notify</button>
+  </body>
+</html>
+

@@ -1,0 +1,41 @@
+<!--------------------------------------------------------------------
+--
+-- index.html
+-- Top-level HTML for billstclair/elm-system-notifications
+-- Copyright (c) 2018 Bill St. Clair <billstclair@gmail.com>
+-- Some rights reserved.
+-- Distributed under the MIT License
+-- See LICENSE.txt
+--
+---------------------------------------------------------------------->
+
+<html>
+  <head>
+    <title>Your Title Here</title>
+    <meta charset="UTF-8">
+    <!-- If you compile your Elm code into something other than "index.js",
+      -- change that below. -->
+    <script type='text/javascript' src='index.js'></script>
+    <script type='text/javascript' src='js/elmNotifications.js'></script>
+  </head>
+  <body>
+    <script type='text/javascript'>
+
+// Change "Main" to your top-level application class name.
+var app = Elm.Main.fullscreen();
+
+// Change "notify" to your port name.
+app.ports.notify.subscribe(function(obj) {
+  function donotify(permission) {
+    if (permission == "granted") {
+      elmNotifications.notify(obj.title, obj.body, obj.image);
+    }
+  }
+  if (elmNotifications.isAvailable()) {
+    elmNotifications.requestPermission(donotify);
+  }
+});
+
+    </script>
+  </body>
+</html>
